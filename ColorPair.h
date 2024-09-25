@@ -13,16 +13,21 @@ namespace TelCoColorCoder {
         MajorColor majorColor;
         MinorColor minorColor;
     public:
+        // Constructor
         ColorPair(MajorColor major, MinorColor minor);
+
+        // Getters
         MajorColor getMajor();
         MinorColor getMinor();
+
+        // Converts the color pair to a string representation
         std::string ToString();
     };
 
     extern const char* MajorColorNames[];
     extern const char* MinorColorNames[];
 
-    // Externally declare the sizes of the arrays
+    // Externally declared sizes of the arrays
     extern int numberOfMajorColors;
     extern int numberOfMinorColors;
 }

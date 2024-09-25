@@ -1,12 +1,12 @@
 #include "ColorCoding.h"
 
 namespace TelCoColorCoder {
-    
     extern const char* MajorColorNames[];
     extern const char* MinorColorNames[];
 
-    int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-    int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+    // Externally declared sizes of the arrays
+    extern int numberOfMajorColors;
+    extern int numberOfMinorColors;
 
     ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;

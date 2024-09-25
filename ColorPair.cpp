@@ -1,10 +1,27 @@
 #include "ColorPair.h"
 
 namespace TelCoColorCoder {
-    const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    const char* MinorColorNames[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
-    // Define the sizes of the arrays here
-    int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-    int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+    // Constructor definition
+    ColorPair::ColorPair(MajorColor major, MinorColor minor) :
+        majorColor(major), minorColor(minor)
+    {}
+
+    // Getter for MajorColor
+    MajorColor ColorPair::getMajor() {
+        return majorColor;
+    }
+
+    // Getter for MinorColor
+    MinorColor ColorPair::getMinor() {
+        return minorColor;
+    }
+
+    // ToString method implementation
+    std::string ColorPair::ToString() {
+        std::string colorPairStr = MajorColorNames[majorColor];
+        colorPairStr += " ";
+        colorPairStr += MinorColorNames[minorColor];
+        return colorPairStr;
+    }
 }

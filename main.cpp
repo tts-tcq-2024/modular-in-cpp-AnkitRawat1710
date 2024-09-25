@@ -16,12 +16,22 @@ void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorC
     assert(pairNumber == expectedPairNumber);
 }
 
+void PrintReferenceManual() {
+    for (int i = 1; i <= 25; ++i) {
+        ColorPair colorPair = GetColorFromPairNumber(i);
+        std::cout << "Pair Number: " << i << " - " << colorPair.ToString() << std::endl;
+    }
+}
+
+
 int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
 
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
+
+    PrintReferenceManual();
 
     return 0;
 }

@@ -4,6 +4,7 @@
 #include <string>
 
 namespace TelCoColorCoder {
+
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
@@ -17,6 +18,13 @@ namespace TelCoColorCoder {
         MinorColor getMinor();
         std::string ToString();
     };
+
+    extern const char* MajorColorNames[];
+    extern const char* MinorColorNames[];
+
+    // Externally declare the sizes of the arrays
+    extern int numberOfMajorColors;
+    extern int numberOfMinorColors;
 }
 
 #endif

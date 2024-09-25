@@ -18,10 +18,11 @@ void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorC
 
 void PrintReferenceManual() {
     for (int i = 1; i <= 25; ++i) {
-        ColorPair colorPair = GetColorFromPairNumber(i);
+        TelCoColorCoder::ColorPair colorPair = TelCoColorCoder::GetColorFromPairNumber(i);
         std::cout << "Pair Number: " << i << " - " << colorPair.ToString() << std::endl;
     }
 }
+
 
 
 int main() {

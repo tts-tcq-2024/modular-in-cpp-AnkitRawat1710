@@ -23,6 +23,7 @@ namespace TelCoColorCoder {
         return minorColor;
     }
 
+   // Converts the ColorPair to a string representation in the format "MajorColor MinorColor"
     std::string ColorPair::ToString() {
         std::string colorPairStr = MajorColorNames[majorColor];
         colorPairStr += " ";

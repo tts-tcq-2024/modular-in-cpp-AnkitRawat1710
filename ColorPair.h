@@ -8,6 +8,7 @@ namespace TelCoColorCoder {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
+   // Class to represent a pair of MajorColor and MinorColor
     class ColorPair {
     private:
         MajorColor majorColor;

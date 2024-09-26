@@ -20,7 +20,6 @@ void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorC
 
 // Function to print reference manual (mapping each pair number to its corresponding MajorColor and MinorColor)
 void PrintReferenceManual() {
-void PrintReferenceManual() {
     for (int i = 1; i <= 25; ++i) {
         TelCoColorCoder::ColorPair colorPair = TelCoColorCoder::GetColorFromPairNumber(i);
         std::cout << "Pair Number: " << i << " - " << colorPair.ToString() << std::endl;

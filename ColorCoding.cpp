@@ -8,6 +8,7 @@ namespace TelCoColorCoder {
     extern int numberOfMajorColors;
     extern int numberOfMinorColors;
 
+    // Function to get the color pair (MajorColor, MinorColor) from the pair number
     ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -15,6 +16,7 @@ namespace TelCoColorCoder {
         return ColorPair(majorColor, minorColor);
     }
 
+    // Function to get the pair number from the given MajorColor and MinorColor
     int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
         return major * numberOfMinorColors + minor + 1;
     }
